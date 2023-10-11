@@ -77,4 +77,35 @@ body{
     margin-right: auto;
    
 }
+.menu__union {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    background-color: gray; /* Color de fondo del menú */
+    overflow: hidden;
+    z-index: 1;
+}
+.menu__union li { 
+    margin-right: 20px;
+}
+li a { 
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    float: left;
+    font-size: 12px;
+}
+.logoumg { 
+    float: left;
+    top: 0;
+    left: 75%;
+    position: absolute;
+    z-index: 2;
+    padding-top: 1px;
 
+}
+.imgumg {
+    height: 50px;
+    width: 170px;
+    position: right;
+}
