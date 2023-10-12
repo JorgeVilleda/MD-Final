@@ -34,12 +34,11 @@ var mostrarIntegrantes = document.getElementById("mostrarIntegrantes");
     var t4 = document.getElementById("t4"); 
 
 function mostrarMiembros (){ 
-    t1.classList.remove("tarjeta"); 
-    t2.classList.remove("tarjeta"); 
-    t3.classList.remove("tarjeta"); 
-    t4.classList.remove("tarjeta"); 
-}
-
+    t1.classList.remove("target"); 
+    t2.classList.remove("target"); 
+    t3.classList.remove("target"); 
+    t4.classList.remove("target"); 
+} 
 mostrarIntegrantes.addEventListener("click", mostrarMiembros); 
 
 var mostrarSobreNosotros = document.getElementById("mostrarIntegrantes"); 
