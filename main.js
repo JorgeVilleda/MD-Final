@@ -26,3 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 });
+
+var mostrarIntegrantes = document.getElementById("mostrarIntegrantes"); 
+    var t1 = document.getElementById("t1"); 
+    var t2 = document.getElementById("t2"); 
+    var t3 = document.getElementById("t3"); 
+    var t4 = document.getElementById("t4"); 
+
+function mostrarMiembros (){ 
+    t1.classList.remove("tarjeta"); 
+    t2.classList.remove("tarjeta"); 
+    t3.classList.remove("tarjeta"); 
+    t4.classList.remove("tarjeta"); 
+}
+
+mostrarIntegrantes.addEventListener("click", mostrarMiembros); 
+
+var mostrarSobreNosotros = document.getElementById("mostrarIntegrantes"); 
+    var sobrenosotros = document.getElementById("sobrenosotros"); 
+
+function mostrartexto () {
+    sobrenosotros.classList.remove("sono");
+}
+mostrarSobreNosotros.addEventListener("click", mostrartexto)
+

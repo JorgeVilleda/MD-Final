@@ -13,6 +13,7 @@ body{
 .nav{ 
     width: 300px;
     float: left;
+    border-right: 1px solid black; /* Añade un borde para visualización */
 }
 .nav__link{ 
     color: #303440;
@@ -122,30 +123,31 @@ li a {
 .columna {
     flex: 1; /* Distribuye el espacio disponible entre las columnas de manera uniforme */
     padding: 10px; /* Agrega relleno para separar las columnas */
-    border: 1px solid #ccc; /* Añade un borde para visualización */
-    background-color: #303440;
+    background-color: #e3e8f4;
     padding-top: 300px;
+    overflow: hidden;
+    /* position: relative; */
 }
 .horizontal {
     position: absolute;
     top: 0;
     left: 0;
     width: 1070px; /* Ancho del div horizontal */
-    height: 100px; /* Altura del div horizontal */
-    background-color: #ff0000; /* Color de fondo del div horizontal */
+    height: 75px; /* Altura del div horizontal */
+    background-color: gray; /* Color de fondo del div horizontal */
     overflow: hidden;
     z-index: 2;
+    padding: 10px;
 }
 .tarjeta {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
+    background-color: red;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    margin: auto; 
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */ 
+    width: 80px; /* Reduce el ancho */
+    margin: 100px; /* Elimina el margen */
+    display: none;
+    position: absolute;
 }
-
 dl {
     margin-top: 20px;
 }
@@ -156,5 +158,11 @@ dt {
 
 dd {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+.sono{ 
+    display: none;
+}
+.logoumgindex{ 
+    padding-left: 770px;
 }
