@@ -12,6 +12,7 @@ body{
 }
 .nav{ 
     width: 300px;
+    float: left;
 }
 .nav__link{ 
     color: #303440;
@@ -28,7 +29,6 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 0 16px 16px 0;
     background: #fff;
 }
 
@@ -56,24 +56,20 @@ body{
     margin-left: 100px;
     list-style: none;
     transition: height .4s;
-    height: 0; 
-}
-
-.list__arrow{ 
-    margin-left: auto;
-    transition: transform .3s;
+    height: auto; 
+    overflow: hidden;
 }
 .list__inside a {
     display: block;
     color: black;
-    text-decoration: none;
-    padding: 10px 20px;
+    text-decoration: underline;
+    padding: 10px 5px;
     border-radius: 5px;
     margin: 5px 0;
     margin-right: auto;
    
 }
-.menu__union {
+.menu__conjuntos {
     list-style-type: none;
     margin: 0;
     padding: 3px;
@@ -81,7 +77,7 @@ body{
     overflow: hidden;
     z-index: 1;
 }
-.menu__union li { 
+.menu__conjuntos li { 
     margin-right: 20px;
 }
 li a { 
@@ -94,7 +90,7 @@ li a {
 .logoumg { 
     float: left;
     top: 0;
-    left: 75%;
+    left: 85%;
     position: absolute;
     z-index: 2;
     padding-top: 1px;
@@ -104,4 +100,61 @@ li a {
     height: 50px;
     width: 170px;
     position: right;
+}
+#mostrarIntegrantes {
+    padding-block: auto; 
+    padding-right: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor{ 
+      background-color: #cacfd2;
+      width: 1070px;
+      height: 610px;
+      left: 300px;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+
+}
+.columna {
+    flex: 1; /* Distribuye el espacio disponible entre las columnas de manera uniforme */
+    padding: 10px; /* Agrega relleno para separar las columnas */
+    border: 1px solid #ccc; /* Añade un borde para visualización */
+    background-color: #303440;
+    padding-top: 300px;
+}
+.horizontal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1070px; /* Ancho del div horizontal */
+    height: 100px; /* Altura del div horizontal */
+    background-color: #ff0000; /* Color de fondo del div horizontal */
+    overflow: hidden;
+    z-index: 2;
+}
+.tarjeta {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: auto; 
+}
+
+dl {
+    margin-top: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 10px;
 }
