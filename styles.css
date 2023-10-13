@@ -208,3 +208,16 @@ dd {
     width: 170px;
 }
 /*</header>*/
+
+/*<main>*/
+.container-lg{
+    background-color: #e3e8f4;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
+    text-align: left;
+    padding: 15px;
+}
+.btncalcresul{ 
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}

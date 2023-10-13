@@ -50,6 +50,39 @@ mostrarSobreNosotros.addEventListener("click", mostrartexto)
 /* Funciones para las paginas de conjuntos */ 
 /* Union de conjuntos */
 
+function mostrarconjuntoC(){ 
+    var idconjuntoC = document.getElementById('conjuntoC'); 
+
+    if(idconjuntoC.style.display === 'none'){ 
+        idconjuntoC.style.display = 'block'; 
+    }else{ 
+        idconjuntoC.style.display = 'none'; 
+    }
+}
+
+var conjuntoA, conjuntoB, conjuntoC; 
+
+function calcularUnion(){ 
+    conjuntoA = document.getElementById('conjuntoA').value.split(',').map(element => element.trim()); 
+    conjuntoB = document.getElementById('conjuntoB').value.split(',').map(element => element.trim()); 
+    var union = [...new Set([...conjuntoA, ...conjuntoB])]; 
+    document.getElementById('resultado').textContent = 'A U B: {' + union.join(',') + '}';
+    
+    if(mostrarconjuntoC){ 
+        calcularABC();
+
+    }else{ 
+    calcularUnion(); 
+    }
+}
+function calcularABC() {
+    conjuntoA = document.getElementById('conjuntoA').value.split(',').map(element => element.trim()); 
+    conjuntoB = document.getElementById('conjuntoB').value.split(',').map(element => element.trim());
+    conjuntoC = document.getElementById('conjuntoC').value.split(',').map(element => element.trim());
+    var union2 = [...new Set([...conjuntoA, ...conjuntoB, ...conjuntoC])];
+
+    document.getElementById('resultado').textContent = 'A U B U C: {' + union2.join(',') + '}';
+}
 
 /* Intersección de conjuntos */ 
 
