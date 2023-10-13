@@ -11,10 +11,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .nav{ 
-    width: 300px;
-    float: left;
+    width: 250px; /*Establece el tamaño del nav*/
     border-right: 1px solid black; /* Añade un borde para visualización */
     position: absolute;
+    z-index: 10;
 }
 .nav__link{ 
     color: #303440;
@@ -75,7 +75,7 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 3px;
-    background-color: gray; /* Color de fondo del menú */
+    background-color: gray; 
     overflow: hidden;
     z-index: 1;
 }
@@ -96,9 +96,8 @@ li a {
     position: absolute;
     z-index: 2;
     padding-top: 1px;
-
 }
-.imgumg {
+.imgumgindex{ 
     height: 50px;
     width: 170px;
     position: right;
@@ -119,22 +118,22 @@ li a {
       right: 100vh;
       position: fixed;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
 }
 .columna {
-    flex: 1; /* Distribuye el espacio disponible entre las columnas de manera uniforme */
-    padding: 10px; /* Agrega relleno para separar las columnas */
+    flex: 1; 
+    padding: 10px; 
     background-color: #e3e8f4;
     padding-top: 300px;
     overflow: hidden;
     position: static;
-    height: 100vh;
+    height: 100vh; 
 }
 .horizontal {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1070px; /* Ancho del div horizontal */
+    width: 190vh; /* Ancho del div horizontal */
     height: 75px; /* Altura del div horizontal */
     background-color: gray; /* Color de fondo del div horizontal */
     overflow: hidden;
@@ -178,3 +177,34 @@ dd {
     white-space: nowrap;
     padding: 10px;
 }
+
+/*Aquí hago el CSS de las paginas de conjuntos */ 
+/*<header>*/
+.mconjuntos{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+    background-color: gray; 
+    z-index: 1;
+}
+.regresarindex{ 
+    border: none;
+    padding: 10px 20px;
+    justify-content: space-between;
+    display: flex;
+    outline: none;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+}
+.regresarindex a{ 
+    text-decoration: none;
+    color:#f2f4fc;
+}
+.imgumg {
+    position: fixed;
+    margin-left: 1140px;
+    top: 10px;
+    height: 50px;
+    width: 170px;
+}
+/*</header>*/

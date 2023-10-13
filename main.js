@@ -6,16 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let listShow = listItem.querySelector('.list__show');
     
         listButton.addEventListener('click', () => {
-            listButton.classList.toggle('arrow');
-    
-            // Cerrar todas las listas excepto la que se hizo clic
+            listButton.classList.toggle('.list__show');
+            
             listItems.forEach(otherListItem => {
                 let otherListShow = otherListItem.querySelector('.list__show');
                 let otherListButton = otherListItem.querySelector('.list__button--click');
     
                 if (otherListShow !== listShow) {
                     otherListShow.style.height = '0';
-                    otherListButton.classList.remove('arrow');
                 }
             });
     
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 });
-
+/* Función para las card de integrantes */
 var mostrarIntegrantes = document.getElementById("mostrarIntegrantes"); 
     var t1 = document.getElementById("t1"); 
     var t2 = document.getElementById("t2"); 
@@ -48,4 +46,17 @@ function mostrartexto () {
     sobrenosotros.classList.remove("sono");
 }
 mostrarSobreNosotros.addEventListener("click", mostrartexto)
+
+/* Funciones para las paginas de conjuntos */ 
+/* Union de conjuntos */
+
+
+/* Intersección de conjuntos */ 
+
+
+/* Diferencia de conjuntos */ 
+
+
+
+/* Complemento de conjuntos */ 
 
