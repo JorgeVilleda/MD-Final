@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 });
+
 /* Función para las card de integrantes */
 var mostrarIntegrantes = document.getElementById("mostrarIntegrantes"); 
     var t1 = document.getElementById("t1"); 
@@ -37,7 +38,7 @@ function mostrarMiembros (){
     t3.classList.remove("target"); 
     t4.classList.remove("target"); 
 } 
-mostrarIntegrantes.addEventListener("click", mostrarMiembros); 
+mostrarIntegrantes.addEventListener('click', mostrarMiembros); 
 
 var mostrarSobreNosotros = document.getElementById("mostrarIntegrantes"); 
     var sobrenosotros = document.getElementById("sobrenosotros"); 
@@ -48,10 +49,23 @@ function mostrartexto () {
 mostrarSobreNosotros.addEventListener("click", mostrartexto)
 
 /* Funciones para las paginas de conjuntos */ 
-/* Union de conjuntos */
 
+/*Muestra alerta para recordar que se deben insertar comas en cada elemento del conjunto */ 
+var conjuntoAinput = document.getElementById('conjuntoAinput');
+var agregarcomas = document.getElementById('agregarcomas');
+
+conjuntoAinput.addEventListener('click', function() {
+    agregarcomas.style.display = 'block';
+    setTimeout(function() {
+        agregarcomas.style.display = 'none';
+        }, 5000);
+});
+
+/* Union de conjuntos */
 function mostrarconjuntoC(){ 
     var idconjuntoC = document.getElementById('conjuntoC'); 
+    var resultado2 = document.getElementById('resultado2'); 
+    resultado2.style.display = 'none'; 
 
     if(idconjuntoC.style.display === 'none'){ 
         idconjuntoC.style.display = 'block'; 
@@ -63,27 +77,43 @@ function mostrarconjuntoC(){
 var conjuntoA, conjuntoB, conjuntoC; 
 
 function calcularUnion(){ 
-    conjuntoA = document.getElementById('conjuntoA').value.split(',').map(element => element.trim()); 
-    conjuntoB = document.getElementById('conjuntoB').value.split(',').map(element => element.trim()); 
+    conjuntoA = document.getElementById('conjuntoA').value.split(', ').map(element => element.trim()); 
+    conjuntoB = document.getElementById('conjuntoB').value.split(', ').map(element => element.trim()); 
     var union = [...new Set([...conjuntoA, ...conjuntoB])]; 
-    document.getElementById('resultado').textContent = 'A U B: {' + union.join(',') + '}';
-    
-    if(mostrarconjuntoC){ 
-        calcularABC();
 
-    }else{ 
-    calcularUnion(); 
+    document.getElementById('resultado').textContent = 'A U B {' + union.join(',') + '}';
+
+    var idconjuntoC = document.getElementById('conjuntoC'); 
+    var resultado2 = document.getElementById('resultado2'); 
+
+    if(idconjuntoC.style.display === 'block'){ 
+        var resultado2 = document.getElementById('resultado2'); 
+        resultado2.textContent = ''; 
+        resultado2.style.display = 'block';
+
+        document.getElementById('btncalcresul').addEventListener('click', function(){
+            calcularABC();
+        });
+    }else { 
+        resultado2.style.display = 'none'; 
     }
 }
 function calcularABC() {
-    conjuntoA = document.getElementById('conjuntoA').value.split(',').map(element => element.trim()); 
-    conjuntoB = document.getElementById('conjuntoB').value.split(',').map(element => element.trim());
-    conjuntoC = document.getElementById('conjuntoC').value.split(',').map(element => element.trim());
-    var union2 = [...new Set([...conjuntoA, ...conjuntoB, ...conjuntoC])];
+    conjuntoA = document.getElementById('conjuntoA').value.split(', ').map(element => element.trim()); 
+    conjuntoB = document.getElementById('conjuntoB').value.split(', ').map(element => element.trim());
+    conjuntoC = document.getElementById('conjuntoCinput').value.split(', ').map(element => element.trim());
+    var unionC = [...new Set([...conjuntoA, ...conjuntoB, ...conjuntoC])];
 
-    document.getElementById('resultado').textContent = 'A U B U C: {' + union2.join(',') + '}';
+    document.getElementById('resultado').style.display = 'none';
+    var resultado2 = document.getElementById('resultado2'); 
+    resultado2.textContent = 'A U B U C {' + unionC.join(', ') + '}';
+    resultado2.style.display = 'block'; 
 }
-
+window.addEventListener("load", function(){ 
+    document.getElementById("btnagregarc").addEventListener('click', function(){ 
+        alert('Para ver el resultado de A U B U C, tiene que volver a presionar el botón de "Realizar Union".');
+    })
+});
 /* Intersección de conjuntos */ 
 
 
