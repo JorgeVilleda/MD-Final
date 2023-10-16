@@ -11,8 +11,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .nav{ 
-    width: 300px;
-    float: left;
+    width: 210px; /*Establece el tamaño del nav*/
+    border-right: 1px solid black; /* Añade un borde para visualización */
+    position: absolute;
+    z-index: 10;
 }
 .nav__link{ 
     color: #303440;
@@ -47,13 +49,13 @@ body{
     display: flex;
     align-items: center;
     gap: 1em; 
-    width: 70%;
+    width: 80%;
     margin: 0 auto; 
 }
 
 .list__show{ 
     width: 80px;
-    margin-left: 100px;
+    margin-left: 70px;
     list-style: none;
     transition: height .4s;
     height: auto; 
@@ -73,7 +75,7 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 3px;
-    background-color: gray; /* Color de fondo del menú */
+    background-color: gray; 
     overflow: hidden;
     z-index: 1;
 }
@@ -94,9 +96,8 @@ li a {
     position: absolute;
     z-index: 2;
     padding-top: 1px;
-
 }
-.imgumg {
+.imgumgindex{ 
     height: 50px;
     width: 170px;
     position: right;
@@ -113,39 +114,38 @@ li a {
       background-color: #cacfd2;
       width: 1070px;
       height: 610px;
-      left: 300px;
-      position: absolute;
+      left: 210px;
+      right: 100vh;
+      position: fixed;
       display: flex;
-      justify-content: space-between;
-
+      justify-content: space-around;
 }
 .columna {
-    flex: 1; /* Distribuye el espacio disponible entre las columnas de manera uniforme */
-    padding: 10px; /* Agrega relleno para separar las columnas */
-    border: 1px solid #ccc; /* Añade un borde para visualización */
-    background-color: #303440;
+    flex: 1; 
+    padding: 10px; 
+    background-color: #e3e8f4;
     padding-top: 300px;
+    overflow: hidden;
+    position: static;
+    height: 100vh; 
 }
 .horizontal {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1070px; /* Ancho del div horizontal */
-    height: 100px; /* Altura del div horizontal */
-    background-color: #ff0000; /* Color de fondo del div horizontal */
+    width: 190vh; /* Ancho del div horizontal */
+    height: 75px; /* Altura del div horizontal */
+    background-color: gray; /* Color de fondo del div horizontal */
     overflow: hidden;
-    z-index: 2;
+    padding: 10px;
 }
-.tarjeta {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    margin: auto; 
+.target{
+    background-color: blue;
+    border-radius: 8px; 
+    width: auto; /* Reduce el ancho */
+    display: none;
+    z-index: 10;
 }
-
 dl {
     margin-top: 20px;
 }
@@ -156,5 +156,94 @@ dt {
 
 dd {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
+.sono{ 
+    display: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+.logoumgindex{ 
+    position: fixed; 
+    margin-left: 1050px;
+    top: 10px;
+    left: 10px; 
+    z-index: 999;
+}
+.texto{ 
+    display: block;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+}
+p { 
+    text-align: justify;
+}
+
+/*Aquí hago el CSS de las paginas de conjuntos */ 
+/*<header>*/
+.mconjuntos{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+    background-color: gray; 
+    z-index: 1;
+}
+.regresarindex{ 
+    border: none;
+    padding: 10px 20px;
+    justify-content: space-between;
+    display: flex;
+    outline: none;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+}
+.regresarindex a{ 
+    text-decoration: none;
+    color:#f2f4fc;
+}
+.imgumg {
+    position: fixed;
+    margin-left: 1140px;
+    top: 10px;
+    height: 50px;
+    width: 170px;
+}
+/*</header>*/
+
+/*<main>*/
+#containermain{
+    background-color: #e3e8f4;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
+    text-align: left;
+    padding: 15px;
+    min-height: 460px;
+    font-family: 'Roboto', sans-serif;
+}
+.col-lg-6{ 
+    min-height: 400px;
+}
+#btncalcresul{ 
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.main{ 
+    flex: 1;
+    padding: 20px;
+    min-height: 500px;
+}
+#lgresultado{ 
+    border-left: 2px solid #303440;
+}
+/*<footer>*/ 
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
