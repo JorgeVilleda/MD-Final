@@ -1,6 +1,5 @@
 /* Funciones para el index */
 /* Muestra los cards de integrantes */
-
 const mostrarintegrantes = document.getElementById('sobrenosotros'); 
 const tarjetas = document.querySelectorAll('.cardintegrantes'); 
 
@@ -10,10 +9,8 @@ mostrarintegrantes.addEventListener('click', function(event){
     tarjetas.forEach(function(tarjeta){ 
         tarjeta.style.display = 'block';       
     });
-        
 });
 /* Funciones para las paginas de conjuntos */ 
-
 /*Muestra alerta para recordar que se deben insertar comas en cada elemento del conjunto */ 
 var conjuntoAinput = document.getElementById('conjuntoAinput');
 var agregarcomas = document.getElementById('agregarcomas');
@@ -63,8 +60,21 @@ function calcularDiferencia() {
     document.getElementById('resultadoA-B').textContent = 'A - B {' + [...diferenciaAB].join(', ') + '}';
     document.getElementById('resultadoB-A').textContent = 'B - A {'+ [...diferenciaBA].join(', ') + '}';
 }
-
-
-
 /* Complemento de conjuntos */ 
+
+var conjuntoCA, conjuntoCB, conjuntoUniverso;
+
+function calcularComplemento() {
+    conjuntoCA = new Set(document.getElementById('conjuntoCA').value.split(', ').map(element => element.trim()));
+    conjuntoCB = new Set(document.getElementById('conjuntoCB').value.split(', ').map(element => element.trim()));
+    conjuntoUniverso = new Set(document.getElementById('conjuntoU').value.split(', ').map(element => element.trim()));
+
+    // Calcula el complemento de A en relación con el conjunto universo U (U - A)
+    var complementoA = new Set([...conjuntoUniverso].filter(x => !conjuntoCA.has(x)));
+    var complementoB = new Set([...conjuntoUniverso].filter(x => !conjuntoCB.has(x)));
+
+    document.getElementById('resultadoA↑C').textContent = 'A∁ {' + [...complementoA].join(', ') + '}';
+    document.getElementById('resultadoB↑C').textContent = 'B∁ {' + [...complementoB].join(', ') + '}';
+
+}
 

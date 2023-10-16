@@ -105,6 +105,9 @@ p {
 #lgresultadou{ 
     border-left: 2px solid #303440;
 }
+#conjuntouniversal{ 
+    padding-bottom: 15px;
+}
 /*<footer>*/ 
 .footer {
     background-color: #f8f9fa;
@@ -120,15 +123,34 @@ p {
     padding: 20px;
     min-height: 500px;
 }
-#lgresultado{ 
-    border-left: 2px solid #303440;
+
+/* </footer> */
+/* Estilos para los resultados de las operaciones con conjuntos */
+#resultado{ 
+    font-weight: bold;
+    font-size: larger;
 }
-/*<footer>*/ 
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+#resultadoA-B{ 
+    font-weight: bold;
+    font-size: larger;
+}
+#resultadoB-A{ 
+    font-weight: bold;
+    font-size: larger;
+}
+#resultadoA∩B{ 
+    font-weight: bold;
+    font-size: larger; 
+}
+#resultadoB∩A{ 
+    font-weight: bold;
+    font-size: larger; 
+}
+#resultadoA↑C{ 
+    font-weight: bold;
+    font-size: larger;
+}
+#resultadoB↑C{ 
+    font-weight: bold;
+    font-size: larger;
 }
