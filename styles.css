@@ -1,185 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-*{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{ 
-    background: #eaebef;
+ /* Estilos para el index de la página */ 
+ body{ 
     font-family: 'Roboto', sans-serif;
-}
-.nav{ 
-    width: 210px; /*Establece el tamaño del nav*/
-    border-right: 1px solid black; /* Añade un borde para visualización */
-    position: absolute;
-    z-index: 10;
-}
-.nav__link{ 
-    color: #303440;
-    display: block;
-    padding: 15px 0;
-}
-.nav__link--inside{ 
-    border-radius: 6px;
-    padding-left: 20px;
-}
-.list{ 
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #fff;
-}
-
-.list__item{ 
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-
-.list__item--click{ 
-    cursor: pointer;
-
-}
-.list__button{ 
-    display: flex;
-    align-items: center;
-    gap: 1em; 
-    width: 80%;
-    margin: 0 auto; 
-}
-
-.list__show{ 
-    width: 80px;
-    margin-left: 70px;
-    list-style: none;
-    transition: height .4s;
-    height: auto; 
-    overflow: hidden;
-}
-.list__inside a {
-    display: block;
-    color: black;
-    text-decoration: underline;
-    padding: 10px 5px;
-    border-radius: 5px;
-    margin: 5px 0;
-    margin-right: auto;
-   
-}
-.menu__conjuntos {
-    list-style-type: none;
-    margin: 0;
-    padding: 3px;
-    background-color: gray; 
-    overflow: hidden;
-    z-index: 1;
-}
-.menu__conjuntos li { 
-    margin-right: 20px;
-}
-li a { 
-    color: white;
-    text-align: center;
-    padding: 16px 16px;
-    float: left;
-    font-size: 12px;
-}
-.logoumg { 
-    float: left;
-    top: 0;
-    left: 85%;
-    position: absolute;
-    z-index: 2;
-    padding-top: 1px;
-}
-.imgumgindex{ 
+ }
+ .umgindex{
+    top: 10px;
     height: 50px;
     width: 170px;
-    position: right;
-}
-#mostrarIntegrantes {
-    padding-block: auto; 
+ }
+ .nav-item {
+    padding-left: 30px;
     padding-right: 10px;
-    border: none;
-    outline: none;
-    background: none;
-    font-family: 'Roboto', sans-serif;
-}
-.contenedor{ 
-      background-color: #cacfd2;
-      width: 1070px;
-      height: 610px;
-      left: 210px;
-      right: 100vh;
-      position: fixed;
-      display: flex;
-      justify-content: space-around;
-}
-.columna {
-    flex: 1; 
-    padding: 10px; 
-    background-color: #e3e8f4;
-    padding-top: 300px;
-    overflow: hidden;
-    position: static;
-    height: 100vh; 
-}
-.horizontal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 190vh; /* Ancho del div horizontal */
-    height: 75px; /* Altura del div horizontal */
-    background-color: gray; /* Color de fondo del div horizontal */
-    overflow: hidden;
-    padding: 10px;
-}
-.target{
-    background-color: blue;
-    border-radius: 8px; 
-    width: auto; /* Reduce el ancho */
-    display: none;
-    z-index: 10;
-}
-dl {
-    margin-top: 20px;
-}
+ }
+ .titulocon{ 
+    padding-right: 20px;
+ }
 
-dt {
-    font-weight: bold;
-}
 
-dd {
-    margin-left: 0;
-    margin-bottom: 0px;
-}
-.sono{ 
-    display: none;
-    font-family: 'Roboto', sans-serif;
 
-}
-.logoumgindex{ 
-    position: fixed; 
-    margin-left: 1050px;
-    top: 10px;
-    left: 10px; 
-    z-index: 999;
-}
-.texto{ 
-    display: block;
-    max-width: 200px;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px;
-}
-p { 
-    text-align: justify;
-}
+
+
+
+
+
 
 /*Aquí hago el CSS de las paginas de conjuntos */ 
 /*<header>*/
