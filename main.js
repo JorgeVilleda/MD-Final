@@ -44,10 +44,25 @@ function calcularInterseccion() {
     conjuntoIB = new Set(document.getElementById('conjuntoIB').value.split(', ').map(element => element.trim()));
 
     var interseccionAB = new Set([...conjuntoIA].filter(x => conjuntoIB.has(x)));
+    var interseccionBA = new Set([...conjuntoIB].filter(x => conjuntoIA.has(x)));
 
-    document.getElementById('resultadoo2').textContent = 'A ∩ B {' + [...interseccionAB].join(', ') + '}';
+    document.getElementById('resultadoA∩B').textContent = 'A ∩ B {' + [...interseccionAB].join(', ') + '}';
+    document.getElementById('resultadoB∩A').textContent = 'B ∩ A {' + [...interseccionBA].join(', ') + '}';
 }
 /* Diferencia de conjuntos */ 
+var conjuntoDA, conjuntoDB;
+
+function calcularDiferencia() {
+    conjuntoDA = new Set(document.getElementById('conjuntoDA').value.split(', ').map(element => element.trim()));
+    conjuntoDB = new Set(document.getElementById('conjuntoDB').value.split(', ').map(element => element.trim()));
+
+    // Calcula la diferencia A - B (elementos en conjuntoIA pero no en conjuntoIB)
+    var diferenciaAB = new Set([...conjuntoDA].filter(x => !conjuntoDB.has(x)));
+    var diferenciaBA = new Set([...conjuntoDB].filter(x => !conjuntoDA.has(x)));
+
+    document.getElementById('resultadoA-B').textContent = 'A - B {' + [...diferenciaAB].join(', ') + '}';
+    document.getElementById('resultadoB-A').textContent = 'B - A {'+ [...diferenciaBA].join(', ') + '}';
+}
 
 
 
