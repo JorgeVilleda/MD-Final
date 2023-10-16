@@ -36,6 +36,7 @@ function calcularUnion(){
     document.getElementById('resultado').textContent = 'A U B {' + union.join(',') + '}';
 }
 /* Intersección de conjuntos */ 
+
 var conjuntoIA, conjuntoIB;
 
 function calcularInterseccion() {
