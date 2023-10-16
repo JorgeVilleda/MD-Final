@@ -13,12 +13,40 @@
                 <a href="https://www.umg.edu.gt/"><img class="imgumg" src="imagenes/logoumg.png" alt="logo de la universidad"></a>        
             </nav>
         </header>
-        <main class="container mt-8"> 
-            
-                
+        <main class="main"> 
+            <div class="container-xl" id="containermain">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <h3>¿Qué es la intersección de conjuntos?</h3>
+                            <p>En teoría de conjuntos, la intersección de dos (o más) conjuntos es una operación que resulta en otro conjunto que contiene los elementos comunes a los conjuntos partida.</p>
+                            <h5>Se representa con el símbolo:  <strong>∩</strong></h5>
+                        </div>
+                        <h2>Ingreso de datos: </h2>
+                        <div class="mb-3" id="conjuntoAinput">
+                            <label for="conjuntoA">Conjunto A: </label>
+                            <input type="text" id="conjuntoIA" placeholder="1, 2, 3, 4...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="conjuntoB">Conjunto B: </label>
+                            <input type="text" id="conjuntoIB" placeholder="2, 4, 6, 8...">
+                        </div>   
+                        <button onclick="calcularInterseccion()" id="btncalcinter" type="button" class="btn btn-success">Realizar Intersección</button>
+                    </div>
+                    <div class="col-lg-6" id="lgresultado">
+                        <h2>Resultado: </h2>
+                        <div id="resultadoo2"></div>
+                    </div>
+                </div>
+            </div>
         </main>
-        <footer> 
-
+        <footer class="footer">
+            <div class="container-xl">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="agregarcomas" style="display:none;">
+                        <strong>¡Importante!</strong> Cuando quiera realizar la operación, tiene que agregar la coma entre cada elemento del conjunto; además se pueden agregar palabras. 
+                    </div>
+                </div>
+            </div>
         </footer>
     <script src="main.js"></script>
     </body>

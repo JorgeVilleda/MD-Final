@@ -115,8 +115,43 @@ window.addEventListener("load", function(){
     })
 });
 /* Intersección de conjuntos */ 
+function mostrarconjuntoIC() {
+    var idconjuntoIC = document.getElementById('conjuntoIC');
+    var resultadointer2 = document.getElementById('resultadointer2');
+    resultadointer2.style.display = 'none';
 
+    if (idconjuntoIC.style.display === 'none') {
+        idconjuntoIC.style.display = 'block';
+    } else {
+        idconjuntoIC.style.display = 'none';
+    }
+}
 
+var conjuntoIA, conjuntoIB, conjuntoIC;
+
+function calcularInterseccion() {
+    conjuntoIA = new Set(document.getElementById('conjuntoIA').value.split(', ').map(element => element.trim()));
+    conjuntoIB = new Set(document.getElementById('conjuntoIB').value.split(', ').map(element => element.trim()));
+
+    var interseccionAB = new Set([...conjuntoIA].filter(x => conjuntoIB.has(x)));
+
+    document.getElementById('resultadoo2').textContent = 'A ∩ B {' + [...interseccionAB].join(', ') + '}';
+
+    var idconjuntoIC = document.getElementById('conjuntoIC');
+    var resultadointer2 = document.getElementById('resultadointer2');
+
+    if (idconjuntoIC.style.display === 'block') {
+        var resultadointer2 = document.getElementById('resultadointer2');
+        resultadointer2.textContent = '';
+        resultadointer2.style.display = 'block';
+
+        document.getElementById('btncalcinter').addEventListener('click', function () {
+            calcularIABC();
+        });
+    } else {
+        resultadointer2.style.display = 'none';
+    }
+}
 /* Diferencia de conjuntos */ 
 
 
