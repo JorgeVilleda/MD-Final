@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-*{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{ 
-    background: #eaebef;
+ /* Estilos para el index de la página */ 
+ body{ 
     font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
 }
 .nav{ 
     width: 250px; /*Establece el tamaño del nav*/
@@ -98,18 +92,62 @@ li a {
     padding-top: 1px;
 }
 .imgumgindex{ 
+=======
+ }
+ .umgindex{
+    top: 10px;
+>>>>>>> c6436678ea9b664a1c97e7a146814d9f94bcfc71
     height: 50px;
     width: 170px;
-    position: right;
-}
-#mostrarIntegrantes {
-    padding-block: auto; 
+ }
+ .nav-item {
+    padding-left: 30px;
     padding-right: 10px;
+ }
+ .titulocon{ 
+    padding-right: 20px;
+ }
+ .cardintegrantes{ 
+    width: 15rem;
+    top: 100px;
+    display: none;
+ }
+.card-img-top{ 
+    height: 260px;
+}
+.col{ 
+    padding-top: 50px;
+    padding-right: 10px;
+}
+.card-text{
+    text-align: justify;
+}
+
+
+
+
+
+
+
+/*Aquí hago el CSS de las paginas de conjuntos */ 
+/*<header>*/
+.mconjuntos{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+    background-color: gray; 
+    z-index: 1;
+}
+.regresarindex{ 
     border: none;
+    padding: 10px 20px;
+    justify-content: space-between;
+    display: flex;
     outline: none;
     background: none;
     font-family: 'Roboto', sans-serif;
 }
+<<<<<<< HEAD
 .contenedor{ 
       background-color: #cacfd2;
       width: 1070px;
@@ -221,3 +259,53 @@ dd {
     margin-top: 10px;
     flex-direction: column;
 }
+=======
+.regresarindex a{ 
+    text-decoration: none;
+    color:#f2f4fc;
+}
+.imgumg {
+    position: fixed;
+    margin-left: 1140px;
+    top: 10px;
+    height: 50px;
+    width: 170px;
+}
+/*</header>*/
+
+/*<main>*/
+#containermain{
+    background-color: #e3e8f4;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
+    text-align: left;
+    padding: 15px;
+    min-height: 460px;
+    font-family: 'Roboto', sans-serif;
+}
+.col-lg-6{ 
+    min-height: 400px;
+}
+#btncalcresul{ 
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.main{ 
+    flex: 1;
+    padding: 20px;
+    min-height: 500px;
+}
+#lgresultado{ 
+    border-left: 2px solid #303440;
+}
+/*<footer>*/ 
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+>>>>>>> c6436678ea9b664a1c97e7a146814d9f94bcfc71

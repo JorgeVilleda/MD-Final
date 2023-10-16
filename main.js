@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let listItems = document.querySelectorAll('.list__item--click');
+/* Funciones para el index */
+/* Muestra los cards de integrantes */
 
+<<<<<<< HEAD
     listItems.forEach(listItem => {
         let listButton = listItem.querySelector('.list__button--click');
         let listShow = listItem.querySelector('.list__show');
@@ -21,9 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
             let height = listShow.clientHeight;
             listShow.style.height = (height === 0) ? `${listShow.scrollHeight}px` : '0';
         });
+=======
+const mostrarintegrantes = document.getElementById('sobrenosotros'); 
+const tarjetas = document.querySelectorAll('.cardintegrantes'); 
+
+mostrarintegrantes.addEventListener('click', function(event){ 
+    event.preventDefault(); 
+
+    tarjetas.forEach(function(tarjeta){ 
+        tarjeta.style.display = 'block';       
+>>>>>>> c6436678ea9b664a1c97e7a146814d9f94bcfc71
     });
-    
+        
 });
+<<<<<<< HEAD
 /* Función para las card de integrantes */
 var mostrarIntegrantes = document.getElementById("mostrarIntegrantes"); 
     var t1 = document.getElementById("t1"); 
@@ -87,6 +99,42 @@ function calcularABC() {
 /* Intersección de conjuntos */ 
 
 
+=======
+/* Funciones para las paginas de conjuntos */ 
+
+/*Muestra alerta para recordar que se deben insertar comas en cada elemento del conjunto */ 
+var conjuntoAinput = document.getElementById('conjuntoAinput');
+var agregarcomas = document.getElementById('agregarcomas');
+
+conjuntoAinput.addEventListener('click', function() {
+    agregarcomas.style.display = 'block';
+    setTimeout(function() {
+        agregarcomas.style.display = 'none';
+        }, 5000);
+});
+
+/* Union de conjuntos */
+var conjuntoA, conjuntoB; 
+
+function calcularUnion(){ 
+    conjuntoA = document.getElementById('conjuntoA').value.split(', ').map(element => element.trim()); 
+    conjuntoB = document.getElementById('conjuntoB').value.split(', ').map(element => element.trim()); 
+    var union = [...new Set([...conjuntoA, ...conjuntoB])]; 
+
+    document.getElementById('resultado').textContent = 'A U B {' + union.join(',') + '}';
+}
+/* Intersección de conjuntos */ 
+var conjuntoIA, conjuntoIB;
+
+function calcularInterseccion() {
+    conjuntoIA = new Set(document.getElementById('conjuntoIA').value.split(', ').map(element => element.trim()));
+    conjuntoIB = new Set(document.getElementById('conjuntoIB').value.split(', ').map(element => element.trim()));
+
+    var interseccionAB = new Set([...conjuntoIA].filter(x => conjuntoIB.has(x)));
+
+    document.getElementById('resultadoo2').textContent = 'A ∩ B {' + [...interseccionAB].join(', ') + '}';
+}
+>>>>>>> c6436678ea9b664a1c97e7a146814d9f94bcfc71
 /* Diferencia de conjuntos */ 
 
 
