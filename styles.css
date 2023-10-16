@@ -15,8 +15,21 @@
  .titulocon{ 
     padding-right: 20px;
  }
-
-
+ .cardintegrantes{ 
+    width: 15rem;
+    top: 100px;
+    display: none;
+ }
+.card-img-top{ 
+    height: 260px;
+}
+.col{ 
+    padding-top: 50px;
+    padding-right: 10px;
+}
+.card-text{
+    text-align: justify;
+}
 
 
 
